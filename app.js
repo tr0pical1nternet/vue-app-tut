@@ -2,16 +2,24 @@ new Vue({
   el: "#vue-app",
 
   data: {
-    name: "Dirkleton Jeffreys",
-    job: "Unemployed",
-    website: "https://charlesrobertson.co",
-    text: "A glorious field of text",
-    hotlink: '<a href="http://www.superbad.com">superbad.com</a>'
+    age: 75,
+    x: 0,
+    y: 0
   },
 
   methods: {
-    greet: function() {
-      return "Good Morning, " + this.name + " have a nice day working at " + this.job + ".";
+    add: function (amount) {
+      this.age += amount;
+    },
+    subtract: function (amount) {
+      this.age -= amount;
+    },
+    updateXY: function(event) {
+      this.x = event.offsetX;
+      this.y = event.offsetY;
+    },
+    click: function() {
+      alert("Nice try sucka'");
     }
   }
 })

@@ -3,19 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>VueJS Tutorial</title>
-    <link src="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
     <div id="vue-app">
-      <h1>Vue App Tutorial</h1>
-      <p>Name: {{ name }}</p>
-      <p>Job: {{ job }}</p>
-      <p>{{ greet() }}</p>
-      <p>Check out this <a v-bind:href="website">website right here</a></p>
-      <input type="text" v-bind:value="text" />
-      <p v-html="hotlink"></p>
-      <script src="app.js"></script>
+      <h1>Events</h1>
+      <p>The age is {{ age }}</p>
+      <button v-on:click.once="add(1)">Add</button>
+      <button v-on:click="subtract(1)">Subtract</button>
+      <button v-on:click="add(10)">Add 10</button>
+      <button v-on:click="subtract(10)">Subtract 10</button>
+      <div id="canvas" v-on:mousemove="updateXY"> {{ x }}, {{ y }}</div>
+      <a v-on:click.prevent="click" href="https://charlesrobertson.co">charlesrobertson.co</a>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
