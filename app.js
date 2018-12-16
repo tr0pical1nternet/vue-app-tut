@@ -3,12 +3,15 @@ new Vue({
 
   data: {
     name: "Dirkleton Jeffreys",
-    job: "Unemployed"
+    job: "Unemployed",
+    website: "https://charlesrobertson.co",
+    text: "A glorious field of text",
+    hotlink: '<a href="http://www.superbad.com">superbad.com</a>'
   },
 
   methods: {
     greet: function() {
-      return "Good Morning";
+      return "Good Morning, " + this.name + " have a nice day working at " + this.job + ".";
     }
   }
 })

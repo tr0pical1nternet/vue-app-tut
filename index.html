@@ -12,6 +12,9 @@
       <p>Name: {{ name }}</p>
       <p>Job: {{ job }}</p>
       <p>{{ greet() }}</p>
+      <p>Check out this <a v-bind:href="website">website right here</a></p>
+      <input type="text" v-bind:value="text" />
+      <p v-html="hotlink"></p>
       <script src="app.js"></script>
     </div>
   </body>
